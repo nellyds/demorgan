@@ -14,14 +14,7 @@
         src="/static/alpha-construction-logo-dark.png"
         width="50"
       />
-      <v-btn
-        aria-label="Close"
-        class="ml-4"
-        icon
-        @click="toggleDrawer"
-      >
-        <v-icon>mdi-close</v-icon>
-      </v-btn>
+
     </v-row>
     <v-divider />
     <v-list>

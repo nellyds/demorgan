@@ -1,35 +1,12 @@
 <template>
 <v-responsive >
-
-    <v-carousel
-      cycle
-      hide-delimiter-background
-      show-arrows-on-hover
-    >
-      <v-carousel-item 
-       v-for="(item,i) in items"
-        :key="i"
-
-      >      
-
-          <v-row
-            class="jumboRow"
-          >
-                <v-img class="jumboImage"
-              :src="item.src"
-   />  
-<v-col
-          cols="12"
-          sm="8">
-          <div data-aos="slide-up" class="headerContainer" data-aos-duration="1200" >
-            <p data-aos="slide-left" data-aos-duration="1500" class="headerCopy"> {{item.copyHeader}}</p>
-            <p data-aos="slide-left" data-aos-duration="1800" class="headerTitle">{{ item.copy }} </p>
-        </div>
-</v-col>
-          </v-row>
-
-      </v-carousel-item>
-    </v-carousel>
+<div class="jumboTron">
+<div class="jumboText" data-aos="slide-left" data-aos-duration="1200">
+<p data-aos="slide-left" data-aos-duration="1800">Demorgan</p>
+<p data-aos="slide-left" data-aos-duration="2000">WellNess</p>
+<h4 data-aos="slide-left" data-aos-duration="2300">Your Health  <span class="highlight" data-aos="slide-left" data-aos-duration="2800">Our Mission </span> </h4>
+</div>
+</div>
 </v-responsive>
 </template>
 <script>
@@ -39,56 +16,64 @@ export default {
 
   data(){
       return{
-        items: [
-        {
-          src: 'https://i.imgur.com/lrevIFw.jpg',
-          copy: 'Not just better healthcare, but a better healthcare experience.',
-          copyHeader: 'SERVICE'
-        },
-        {
-          src: 'https://i.imgur.com/KVTmHpl.jpg',
-          copy: 'Not just better healthcare, but a better healthcare experience.',
-          copyHeader: 'Your health comes first'
-        },
-        {
-          src: 'https://i.imgur.com/2cWh1Qm.jpg',
-          copy: 'Not just better healthcare, but a better healthcare experience.',
-          copyHeader: 'Medicine that touches the world'
-        },
-        {
-          src: 'https://i.imgur.com/1MDpdSl.jpg',
-          copy: 'Not just better healthcare, but a better healthcare experience.',
-          copyHeader: 'Bettering the Human Condition'
-        },
-      ],
-      mWidth: 1100
-      }
+      }     
   },
 };
 
 </script>
 <style scoped>
-.headerCopy{
-    font-size: 2em;
-    font-weight: bolder;
-    margin-left: 33%;
-    color:white;
-    
+.jumboText p{
+  padding: 15px;
+  font-size: 1.2em;
 }
-.headerTitle{
-font-size: 1.2em;
-  margin-left: 33%;
+.jumboText .highlight{
+  font-weight:bold
+}
+.jumboText h4{
+  font-size: 1em;
+  padding: 15px;
   color:white;
-     
 }
-.headerContainer{
-    background-color: rgba(69,189,255,1);
-    width: 40%;  
+.jumboText{ 
+width: 300px;
+height: 300px;
+  background-color: rgba(69, 189, 255, 0.3);
+  color: Black;
+  font-family: 'Montserrat', sans-serif;
+
+  margin-left: 50px;
+  margin-top: 50px;
+  padding-top: 50px;
 }
-.jumboImage{
-    margin-top:2em;
-    position: absolute;
-    margin-left:15%;
-    width: 65vw
+@media screen and (min-width: 500px){
+  .jumboText{ 
+width: 500px;
+height: 500px;
+  background-color: rgba(69,189,255,.3);
+  color: Black;
+  font-family: 'Montserrat', sans-serif;
+
+  margin-left: 50px;
+  margin-top: 50px;
+  padding-top: 50px;
+}
+.jumboText p{
+  padding: 5px;
+  font-size: 3em;
+}
+.jumboText .highlight{
+  font-weight:bold;
+  font-size: 1.3em;
+}
+.jumboText h4{
+  font-size: 1em;
+  padding: 15px;
+  color:white;
+}
+
+}
+.jumboTron{
+  background-image: url('~@/assets/consultation.png');
+  height: 600px;
 }
 </style>
