@@ -37,7 +37,7 @@
       name: "Timeline",
     data: () => ({
       milestones:[
-          {date:"9/22/08", action:"gratuated Nursing SChool"},
+          {date:"9/22/08", action:"gratuated Nursing School"},
           {date:"9/30/09", action: "did rotations at hospital"},
            {date:"9/30/09", action: "did rotations at hospital"},
             {date:"9/30/09", action: "did rotations at hospital"},

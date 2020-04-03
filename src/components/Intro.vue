@@ -3,15 +3,15 @@
     <div class="container">
       <v-row cols="6">
         <v-col  sm="12" md="6">
-         <div class="aboutContainer">
-            {{intro}}
-          </div>
-        </v-col>
-                <v-col sm="12" md="6" >
-                           <div class="aboutContainer">
-          <Timeline />
-          </div>
-        </v-col> -->
+            <div class="aboutContainer">
+              {{intro}}
+            </div>
+          </v-col>
+          <v-col sm="12" md="6" >
+            <div class="aboutContainer">
+              <Timeline />
+            </div>
+        </v-col> 
       </v-row>
 </div>
   </section>
@@ -33,9 +33,13 @@ import Timeline from "@/components/Timeline.vue";
   height: 600px;
 }
 .aboutContainer{
-  background-color:rgb(240,240,240);
+  background-color:rgb(235, 235, 235);
   padding: 10px;
-  height: 100px;
   width: 600px;
+}
+@media screen and (max-width: 500px){
+  .container{
+  height: 700px;
+}
 }
 </style>

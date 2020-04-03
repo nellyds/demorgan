@@ -9,11 +9,14 @@
         class="mx-4"
         :inset="inset"
       ></v-divider>
+      <Divider header="Who We Are"/>
       <Intro />
-     
+      <Divider header="What We Do"/>
       <Services id="service" />
+      <Divider header="What People are saying" />
       <Testimonials />
       <v-divider/>
+      <Social />
       <Contact id='contact'/>
     </v-content>
   </v-app>
@@ -27,6 +30,8 @@ import Jumbotron from "@/components/Jumbotron.vue";
 import Contact from "@/components/Contact.vue";
 import Services from "@/views/Services.vue";
 import Intro from "@/components/Intro.vue";
+import Divider from "@/components/Divider.vue";
+import Social from "@/views/Social.vue";
 export default {
   name: "App",
 
@@ -37,6 +42,8 @@ export default {
     Header,
     Intro,
     Services,
+    Divider,
+    Social
   },
 
   data: () => ({

@@ -1,4 +1,5 @@
 <template>
+<div class="container">
   <v-container>
    <v-row>
        <v-col cols="16" sm="4">
@@ -18,6 +19,7 @@
           </v-col>
    </v-row>
   </v-container>
+  </div>
 </template>
 
 <script>
@@ -40,9 +42,7 @@ export default {
 };
 </script>
 <style scoped>
-body{
-  background-color:rgb(55, 189, 255);
-}
+
 .serviceContainerBlue{
     background-color: rgb(55, 189, 255);
     color: white;
@@ -67,4 +67,20 @@ body{
         width: 100vw;
 }
 }
+/* @media screen and (min-width: 1000px){
+  .container{
+   background-color:rgb(55, 189, 255); 
+  }
+  .serviceContainerBlue{
+    background-color: rgb(55, 189, 255);
+    color: white;
+    padding: 1em;
+
+}
+.serviceContainerWhite{
+    background-color: rgb(255, 255, 255);
+    color: rgb(55, 189, 255);
+    padding: 1em;
+}
+} */
 </style>

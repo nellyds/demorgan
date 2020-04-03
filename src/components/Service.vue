@@ -21,7 +21,9 @@ export default {
 };
 </script>
 <style scoped>
-
+body{
+  background-color: rgba(0,0,0,0);
+}
 img{
   height: 55px;
   margin-left:50%;

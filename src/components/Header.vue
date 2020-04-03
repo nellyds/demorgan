@@ -50,10 +50,6 @@
             'click': '#service'
           },
           {
-            'to': '/projects',
-            'text': 'Projects'
-          },
-          {
             'to': '/contact',
             'text': 'Contact',
             'click': '#contact'
