@@ -24,6 +24,7 @@ export default {
 <style scoped>
 .jumboText p{
   font-size: 2.2em;
+  padding-right: 1em;
 }
 .jumboText .highlight{
   font-size: 1.2em;
@@ -32,6 +33,7 @@ export default {
 .jumboText h4{
   font-size: 1em;
   color:white;
+    padding-right: 1em;
 }
 .jumboText{ 
 width: 300px;

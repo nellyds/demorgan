@@ -2,10 +2,10 @@
   <v-container>
     <div class="serviceContainer">
         <img :src="require('@/assets/'+ imageUrl)" >
-        <v-card-title>
+        <v-card-title  >
             {{name}}
         </v-card-title>
-        <v-card-text class="headline font-weight-bold">
+        <v-card-text class="headline font-weight-bold"  >
         {{description}}
         </v-card-text>
     </div>

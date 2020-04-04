@@ -3,7 +3,7 @@
 
 
     <v-content>
-      <Header />
+      <Header id="home"/>
         <Jumbotron class="jumbotron"/>
               <v-divider
         class="mx-4"
@@ -11,12 +11,14 @@
       ></v-divider>
       <Divider header="Who We Are"/>
       <Intro />
-      <Divider header="What We Do"/>
+      <Divider div1="true" header="What We Do"/>
+      <div data-aos="slide-left" data-aos-duration="1800" >
       <Services id="service" />
-      <Divider header="What People are saying" />
+      </div>
+      <Divider div2="true" header="What People are saying" />
       <Testimonials />
-      <v-divider/>
-      <Social />
+      <Divider div3="true" header="DeMorgan today" />
+      <Social id='news'/>
       <Contact id='contact'/>
     </v-content>
   </v-app>

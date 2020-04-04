@@ -1,8 +1,8 @@
 <template>
 <div class="container">
   <v-container>
-   <v-row>
-       <v-col cols="16" sm="4">
+   <v-row >
+       <v-col  cols="16" sm="4">
          <div class="serviceContainerBlue" >
          <Service  name="'Prevention and Wellness" description="We offer the best advice and current news to keep your family as healthy and safe as possible." imageUrl="assistantWhite.png"/>
          </div>
@@ -12,7 +12,7 @@
          <Service name="Disease and Conditions" description="Get proactive and schedule a visit and receive the best medical support." imageUrl="studentBlue.png" />
          </div>
         </v-col>
-               <v-col cols="16" sm="4">
+               <v-col  cols="16" sm="4">
          <div class="serviceContainerBlue" >
          <Service  name="Online Visits with Clocktree" description='Talk with Sandy and then sign up at www.clocktree.com' imageUrl="heartCalenderWhite.png"/>
          </div>

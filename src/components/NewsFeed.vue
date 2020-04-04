@@ -6,7 +6,6 @@
       height="400"
       hide-delimiter-background
       show-arrows-on-hover
-      
     >
       <v-carousel-item
         v-for="item in newsItem" :key="item.content"
@@ -21,7 +20,7 @@
         height="200px"
         :src="item.imgUrl"
       >
-        <v-card-title>Article Title</v-card-title>
+        <v-card-title><span class="title">Article Title</span> </v-card-title>
       </v-img>
   
       <v-card-text class="text--primary">
@@ -72,6 +71,11 @@ data(){
 };
 </script>
 <style scoped>
+.title{
+    background-color:rgba(65,189,255, .7);
+    color: white;
+    padding: 5px;
+}
 img{
     height: 100px;
 }

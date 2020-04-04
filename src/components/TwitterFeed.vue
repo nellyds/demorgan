@@ -3,32 +3,29 @@
     <div>
     <paginate name="tweets"
     :list="twitterFeed"
-    :per="5"
+    :per="4"
     >
     <li v-for="tweet in paginated('tweets')" v-bind:key="tweet.tweet">
+        <div class="tweet">
         <v-card
       class="mx-auto"
       max-width="344"
+      data-aos="fade-left"
+      data-aos-duration="1100"
     >
       <v-card-text>
-        <p> {{tweet.tweet}}</p>
+        <p data-aos="slide-left" data-aos-duration="1400"> {{tweet.tweet}}</p>
       </v-card-text>
-      <v-card-actions>
-        <v-btn
-          text
-          color="deep-purple accent-4"
-        >
-          Learn More
-        </v-btn>
-      </v-card-actions>
     </v-card>
+    </div>
     </li>
     </paginate>
-
-    <div data-aos="fade-left" data-aos-duration="1800" >
+  <paginate-links class="list" for="tweets" :simple="{
+        next: 'Next »',
+        prev: '« Back'
+      }"></paginate-links>
     </div>
     </div>
-</div>
 </template>
 <script>
 export default {
@@ -52,6 +49,13 @@ data(){
 };
 </script>
 <style scoped>
+.list{
+    list-style: none;
+    display: inline-block;
+}
+.tweet{
+    padding: 5px;
+}
 li{
     list-style: none;
 }

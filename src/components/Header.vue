@@ -12,7 +12,7 @@
 <v-spacer>
     <v-toolbar-items >
       <v-btn
-      :color="!isScrolling ? 'white' : 'rgba(69, 189, 255, 1)'"
+      :color="!isScrolling ? 'white' : 'black'"
         v-for="(item, i) in items"
         :key="i"
         :active-class="!isScrolling ? 'primary--text' : undefined"
@@ -41,18 +41,21 @@
         return [
           {
             'to': '/',
-            'text': 'Home'
+            'text': 'Home',
+            'click': '#home'
             
           },
           {
-            'to': '/services',
             'text': 'Services',
             'click': '#service'
           },
           {
-            'to': '/contact',
             'text': 'Contact',
             'click': '#contact'
+          },
+          {
+            'text': 'News',
+            'click': '#news'
           }
         ]
       }

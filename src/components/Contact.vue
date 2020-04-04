@@ -17,7 +17,7 @@
                   cols="12"
                   class="mb-4 grey--text"
                 >
-                  Call or submit our online form to request an estimate or for general questions about U.S. Certified Contractors and our services. We look forward to serving you!
+                  Call or submit a note and let's talk about what DeMorgan will do for you!
                 </v-col>
                 <v-col
                   cols="12"
@@ -138,10 +138,14 @@
   export default {
     metaInfo: {
       title: 'Contact',
-      meta: [
-        { name: 'description', content: 'Customized vue-cli templates for Vue and Vuetify' }
-      ]
-    },
 
-  }
+  }}
+
 </script>
+<style scoped>
+
+  .py-5{
+    max-width: 350px;
+  }
+
+</style>
