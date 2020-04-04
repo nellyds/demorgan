@@ -143,9 +143,14 @@
 
 </script>
 <style scoped>
-
-  .py-5{
-    max-width: 350px;
+@media screen and (max-width: 500px){
+.py-5{
+    width: 350px;
   }
-
+}
+@media screen and (min-width: 500px){
+.py-5{
+    min-width: 100%;
+}
+}
 </style>

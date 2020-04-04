@@ -17,15 +17,13 @@
       </div>
       <Divider div2="true" header="What People are saying" />
       <Testimonials />
-      <Divider div3="true" header="DeMorgan today" />
+      <Divider div4="true" header="DeMorgan today" />
       <Social id='news'/>
       <Contact id='contact'/>
     </v-content>
   </v-app>
 </template>
-
 <script>
-
 import Header from "@/components/Header.vue";
 import Jumbotron from "@/components/Jumbotron.vue";
   import Testimonials from "@/components/Testimonials.vue";
