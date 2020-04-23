@@ -55,6 +55,7 @@ data(){
 }
 .tweet{
     padding: 5px;
+    margin: 10px;
 }
 li{
     list-style: none;

@@ -5,10 +5,9 @@ import store from "./store";
 import vuetify from "./plugins/vuetify";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import VuePaginate from 'vue-paginate'
-Vue.use(VuePaginate)
+import VuePaginate from 'vue-paginate';
+Vue.use(VuePaginate);
 Vue.config.productionTip = false;
-
 new Vue({
   created() {
     AOS.init();

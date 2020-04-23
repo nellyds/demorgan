@@ -52,19 +52,9 @@ font-size: 1.4em;
 font-style:italic
 }
 .container{
-  /* margin-left: 50%; */
-  /* background-image: url('~@/assets/handsClasp.png'); */
 }
 img{
   width: 200px;
 }
-/* @media screen and (max-width: 400px){
-  
-}
-@media screen and (min-width: 1000px){
- .container{
-  margin-left: 25%;
-}
-} */
 
 </style>

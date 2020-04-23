@@ -1,6 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
+import Schedule from "../views/Schedule.vue";
 
 Vue.use(VueRouter);
 
@@ -10,7 +11,11 @@ const routes = [
     name: "Home",
     component: Home
   },
-
+  {
+    path:"/contact",
+    name: "Schedule",
+    components: Schedule
+  }
 ];
 
 const router = new VueRouter({

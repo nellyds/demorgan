@@ -5,21 +5,19 @@
     <v-content>
       <Header id="home"/>
         <Jumbotron class="jumbotron"/>
-              <v-divider
-        class="mx-4"
-        :inset="inset"
-      ></v-divider>
-      <Divider header="Who We Are"/>
+      <Divider id="about" div3="true" header="Who We Are"/>
       <Intro />
       <Divider div1="true" header="What We Do"/>
       <div data-aos="slide-left" data-aos-duration="1800" >
       <Services id="service" />
+      <Education />
       </div>
       <Divider div2="true" header="What People are saying" />
       <Testimonials />
       <Divider div4="true" header="DeMorgan today" />
       <Social id='news'/>
       <Contact id='contact'/>
+      <Footer />
     </v-content>
   </v-app>
 </template>
@@ -32,6 +30,8 @@ import Services from "@/views/Services.vue";
 import Intro from "@/components/Intro.vue";
 import Divider from "@/components/Divider.vue";
 import Social from "@/views/Social.vue";
+import Footer from "@/components/Footer.vue";
+import Education from "@/components/Education.vue";
 export default {
   name: "App",
 
@@ -43,7 +43,9 @@ export default {
     Intro,
     Services,
     Divider,
-    Social
+    Social,
+    Footer,
+    Education
   },
 
   data: () => ({

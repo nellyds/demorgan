@@ -1,5 +1,6 @@
 <template>
   <v-container>
+
     <div class="serviceContainer">
         <img :src="require('@/assets/'+ imageUrl)" >
         <v-card-title  >
@@ -29,5 +30,4 @@ img{
   margin-left:50%;
 
 }
-
 </style>

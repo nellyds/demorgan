@@ -1,6 +1,17 @@
 <template>
 <div class="container">
   <v-container>
+    <v-row>
+         <v-col
+            cols="12"
+            md="6"
+            sm="12"
+            >
+            <p class="sectionTitle">
+              Care Services:
+              </p> 
+       </v-col>
+</v-row>
    <v-row >
        <v-col  cols="16" sm="4">
          <div class="serviceContainerBlue" >
@@ -42,7 +53,11 @@ export default {
 };
 </script>
 <style scoped>
-
+.sectionTitle{
+    font-weight:bolder;
+    font-size: 3em;
+    text-align: right;
+}
 .serviceContainerBlue{
     background-color: rgb(55, 189, 255);
     color: white;
@@ -67,20 +82,5 @@ export default {
         width: 100vw;
 }
 }
-/* @media screen and (min-width: 1000px){
-  .container{
-   background-color:rgb(55, 189, 255); 
-  }
-  .serviceContainerBlue{
-    background-color: rgb(55, 189, 255);
-    color: white;
-    padding: 1em;
 
-}
-.serviceContainerWhite{
-    background-color: rgb(255, 255, 255);
-    color: rgb(55, 189, 255);
-    padding: 1em;
-}
-} */
 </style>

@@ -5,9 +5,10 @@
         <v-col  sm="12" md="6">
             <div class="aboutContainer">
               {{intro}}
+              <img src="@/assets/sandy.jpeg" />
             </div>
           </v-col>
-          <v-col sm="12" md="6" >
+          <v-col v-if="$vuetify.breakpoint.smAndUp" sm="12" md="6" >
             <div class="aboutContainer">
               <Timeline />
             </div>
@@ -24,22 +25,31 @@ import Timeline from "@/components/Timeline.vue";
       Timeline
     },
     data: () => ({
-      intro:"April is almost here on the Talking Simpsons Network, and we're shaking things up a little for the next subject of our premium podcast, As you may know, once a month we release the What A Cartoon Movie! podcast, an extra-long discussion about an animated film, exclusively for our $10 Patreon subscribers. And when we open up the voting, we want to let all the $5 folks have a chance to be heard as well so they can help pick episodes they might enjoy down the line. But now, in light of our recent updated schedule, we want to get the votes for the next one moving earlier than we had before!"
-    })
+      intro:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." })
   }
 </script>
 <style scoped>
+@media screen and (min-width: 416px){
 .container{
-  height: 600px;
+  height: 75Vh;
+}
+img{
+  width: 80%;
 }
 .aboutContainer{
-  background-color:rgb(235, 235, 235);
+  border-left: 2px solid rgb(65,189,255);
+  border-bottom: 2px solid rgb(65,189,255);
+  margin: 10px;
   padding: 10px;
   width: 600px;
 }
-@media screen and (max-width: 500px){
-  .container{
-  height: 700px;
+}
+@media screen and (max-width: 415px){
+  .aboutContainer{
+  width: 100vw;
+}
+img{
+  width: 80%;
 }
 }
 </style>

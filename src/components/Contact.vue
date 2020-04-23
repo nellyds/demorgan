@@ -76,7 +76,7 @@
                 <v-col cols="12">
                   <v-btn
                     :block="$vuetify.breakpoint.xsOnly"
-                    color="primary"
+                    color="rgb(65,189,255)"
                     depressed
                     x-large
                   >

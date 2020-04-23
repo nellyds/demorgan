@@ -20,6 +20,9 @@
                     <v-card
                       :elevation="hover ? 0 : 10"
                       >
+                      <v-card-title>
+                        {{milestone.date}}
+                      </v-card-title>
                     <v-card-text >
                       {{milestone.action}}
                     </v-card-text>
@@ -37,11 +40,11 @@
       name: "Timeline",
     data: () => ({
       milestones:[
-          {date:"9/22/08", action:"gratuated Nursing School"},
-          {date:"9/30/09", action: "did rotations at hospital"},
-           {date:"9/30/09", action: "did rotations at hospital"},
-            {date:"9/30/09", action: "did rotations at hospital"},
-             {date:"9/30/09", action: "Began Precepting service"}
+          {date:"9/22/08", action:"Business Milestone 1"},
+          {date:"9/30/09", action: "Business Milestone 2"},
+           {date:"9/30/09", action: "Business Milestone 3"},
+            {date:"9/30/09", action: "Business Milestone 4"},
+             {date:"9/30/09", action: "Business Milestone 5"}
       ]
     })
   }
@@ -49,5 +52,6 @@
 <style scoped>
 .timeline{
     width: 400px;
+    margin-bottom: 35px;
 }
 </style>
