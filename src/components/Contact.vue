@@ -1,156 +1,128 @@
 <template>
-  <section
-    id="contact"
-    class="py-5"
-  >
+  <section id="contact">
+    <v-col class="contactForm" align="center">
+      <v-form ref="form" v-model="valid">
+        Call or submit a note and let's talk about what DeMorgan will do for
+        you!
+        <v-text-field
+          v-model="name"
+          :counter="10"
+          :rules="nameRules"
+          label="Name"
+          required
+        ></v-text-field>
 
-    <v-container>
-      <v-row>
-        <v-col
-          xs12
-          md6
+        <v-text-field
+          v-model="phone"
+          :rules="phoneRules"
+          outlined
+          label="phone"
+        />
+
+        <v-text-field
+          v-model="email"
+          :rules="emailRules"
+          outlined
+          label="email"
+        />
+
+        <v-text-field v-model="location" label="location" outlined />
+
+        <v-textarea v-model="message" label="message" outlined />
+
+        <v-select
+          :items="contactPreference"
+          v-model="preference"
+          label="How should we contact you?"
+        ></v-select>
+        <p>{{ preference }}</p>
+
+        <v-btn
+          :block="$vuetify.breakpoint.xsOnly"
+          color="rgb(65,189,255)"
+          depressed
+          x-large
+          @click="submitMessage"
         >
-          <v-form>
-            <v-container pa-0>
-              <v-row>
-                <v-col
-                  cols="12"
-                  class="mb-4 grey--text"
-                >
-                  Call or submit a note and let's talk about what DeMorgan will do for you!
-                </v-col>
-                <v-col
-                  cols="12"
-                  md="6"
-                >
-                  <v-text-field
-                    outlined
-                    label="First Name*"
-                  />
-                </v-col>
-
-                <v-col
-                  cols="12"
-                  md="6"
-                >
-                  <v-text-field
-                    outlined
-                    label="Last Name*"
-                  />
-                </v-col>
-
-                <v-col
-                  cols="12"
-                  md="6"
-                >
-                  <v-text-field
-                    outlined
-                    label="Your Email*"
-                  />
-                </v-col>
-
-                <v-col
-                  cols="12"
-                  md="6"
-                >
-                  <v-text-field
-                    label="Your Phone Number*"
-                    outlined
-                  />
-                </v-col>
-
-                <v-col cols="12">
-                  <v-text-field
-                    label="Subject"
-                    outlined
-                  />
-                </v-col>
-
-                <v-col cols="12">
-                  <v-textarea
-                    label="Message"
-                    outlined
-                  />
-                </v-col>
-
-                <v-col cols="12">
-                  <v-btn
-                    :block="$vuetify.breakpoint.xsOnly"
-                    color="rgb(65,189,255)"
-                    depressed
-                    x-large
-                  >
-                    Send Message
-                  </v-btn>
-                </v-col>
-              </v-row>
-            </v-container>
-          </v-form>
-        </v-col>
-
-        <v-col
-          cols="12"
-          md="6"
-        >
-          <v-container
-            fluid
-            pa-0
-          >
-            <v-row>
-              <v-col
-                cols="12"
-                md="6"
-                class="pa-0"
-              >
-                <v-card-title>Mailing Address</v-card-title>
-                <v-card-text>
-                  <div>542 Evergreen Terrage</div>
-                  <div>Springfield VT 79938</div>
-                  <div>United States</div>
-                </v-card-text>
-              </v-col>
-
-              <v-col
-                cols="12"
-                md="6"
-                class="pa-0"
-              >
-                <v-card-title>Contact Info</v-card-title>
-                <v-card-text>
-                  <div>+1 (321) 383-4531</div>
-                  <div>
-                    <a href="#">contact@YourBusinessName.com</a>
-                  </div>
-                  <div>
-                    <a href="#">@YourBusinessName</a>
-                  </div>
-                </v-card-text>
-              </v-col>
-            </v-row>
-          </v-container>
-        </v-col>
-      </v-row>
-    </v-container>
+          Send Message
+        </v-btn>
+      </v-form>
+    </v-col>
   </section>
 </template>
 
 <script>
-  export default {
-    metaInfo: {
-      title: 'Contact',
-
-  }}
-
+export default {
+  metaInfo: {
+    title: "Contact"
+  },
+  data() {
+    return {
+      name: null,
+      valid: true,
+      phone: null,
+      email: null,
+      message: null,
+      preference: null,
+      location: null,
+      success: false,
+      failure: null,
+      contactPreference: [
+        "By phone, please leave a voice mail",
+        "By phone, feel free to send a text message",
+        "By email"
+      ],
+      emailRules: [v => /.+@.+\..+/.test(v) || "E-mail must be valid"],
+      phoneRules: [
+        v =>
+          /^[2-9]\d{2}-\d{3}-\d{4}$/.test(v) ||
+          "Phone number must be in formatted xxx-xxx-xxxx"
+      ],
+      nameRules: [
+        v => !!v || "Name is required",
+        v => (v && v.length <= 10) || "Name must be less than 10 characters"
+      ],
+      messageRules: [v => !!v || "Message can not be blank"]
+    };
+  },
+  methods: {
+    submitMessage: function() {
+      this.validate();
+      this.$http
+        .post(this.apiUrl, {
+          name: this.name,
+          email: this.email,
+          message: this.message,
+          preference: this.preference,
+          location: this.location
+        })
+        .then(() => {
+          this.success = true;
+        })
+        .catch(() => {
+          this.failure = true;
+        });
+    },
+    validate: function() {
+      this.$refs.form.validate();
+    }
+  },
+  computed: {
+    apiUrl: function() {
+      return this.$store.state.apiUrl;
+    }
+  }
+};
 </script>
 <style scoped>
-@media screen and (max-width: 500px){
-.py-5{
+@media screen and (max-width: 500px) {
+  .py-5 {
     width: 350px;
   }
 }
-@media screen and (min-width: 500px){
-.py-5{
+@media screen and (min-width: 500px) {
+  .py-5 {
     min-width: 100%;
-}
+  }
 }
 </style>

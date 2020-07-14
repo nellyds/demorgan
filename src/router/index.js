@@ -12,10 +12,11 @@ const routes = [
     component: Home
   },
   {
-    path:"/contact",
+    path: "/contact",
     name: "Schedule",
     components: Schedule
-  }
+  },
+
 ];
 
 const router = new VueRouter({

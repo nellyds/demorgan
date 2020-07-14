@@ -5,16 +5,11 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    drawer: null
+    apiUrl: "http://127.0.0.1:5000/demorgan/message"
   },
   mutations: {
-    toggle(){
-      if (this.state.drawer != true){
-        this.state.drawer = true;
-      }else {
-        this.state.drawer = false;
-      }
-    }
+
+    
   },
   actions: {},
   modules: {}

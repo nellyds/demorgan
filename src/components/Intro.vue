@@ -1,55 +1,60 @@
-<template>  <section id="welcome">
-
+<template>
+  <section id="welcome">
     <div class="container">
       <v-row cols="6">
-        <v-col  sm="12" md="6">
-            <div class="aboutContainer">
-              {{intro}}
-              <img src="@/assets/sandy.jpeg" />
-            </div>
-          </v-col>
-          <v-col v-if="$vuetify.breakpoint.smAndUp" sm="12" md="6" >
-            <div class="aboutContainer">
-              <Timeline />
-            </div>
-        </v-col> 
+        <v-col sm="12" md="6">
+          <div class="aboutContainer">
+            <p>{{ intro }}</p>
+            <p>{{ aboutSandy }}</p>
+            <img src="@/assets/sandy.jpeg" />
+          </div>
+        </v-col>
+        <v-col v-if="$vuetify.breakpoint.smAndUp" sm="12" md="6">
+          <!-- <div class="aboutContainer">
+            <Timeline />
+          </div> -->
+        </v-col>
       </v-row>
-</div>
+    </div>
   </section>
 </template>
 
 <script>
-import Timeline from "@/components/Timeline.vue";
-  export default {
-    components: {
-      Timeline
-    },
-    data: () => ({
-      intro:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." })
-  }
+// import Timeline from "@/components/Timeline.vue";
+export default {
+  components: {
+    // Timeline
+  },
+  data: () => ({
+    intro:
+      "At the DeMorgan group, our mission is to partner with the community for everyone’s health by providing health care services regardless of ability to pay; treating patients with compassion, dignity and respect; protecting confidentiality; and offering culturally sensitive services and community outreach.  With our roots in the Dayton area, we are proud to serve our community and our neighbors.",
+    aboutSandy:
+      "Sandy Anderson CNP is a certified Nurse Practirioner with more than 25 as a practicing nurse and a Family Practice professional."
+  })
+};
 </script>
 <style scoped>
-@media screen and (min-width: 416px){
-.container{
-  height: 75Vh;
+@media screen and (min-width: 416px) {
+  .container {
+    height: 75vh;
+  }
+  img {
+    width: 80%;
+  }
+  .aboutContainer {
+    border-left: 2px solid rgb(65, 189, 255);
+    border-bottom: 2px solid rgb(65, 189, 255);
+    margin: 10px;
+    padding: 10px;
+    width: 600px;
+  }
 }
-img{
-  width: 80%;
-}
-.aboutContainer{
-  border-left: 2px solid rgb(65,189,255);
-  border-bottom: 2px solid rgb(65,189,255);
-  margin: 10px;
-  padding: 10px;
-  width: 600px;
-}
-}
-@media screen and (max-width: 415px){
-  .aboutContainer{
-  width: 100vw;
-}
-img{
-  width: 80%;
-}
+@media screen and (max-width: 415px) {
+  .aboutContainer {
+    width: 100vw;
+  }
+  img {
+    width: 80%;
+  }
 }
 </style>

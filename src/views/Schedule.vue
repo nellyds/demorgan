@@ -1,8 +1,7 @@
 <template>
   <div class="home">
-      <Contact />
-      
-</div>
+    <Contact />
+  </div>
 </template>
 
 <script>
@@ -11,7 +10,7 @@ import Contact from "@/components/Contact.vue";
 export default {
   name: "Schedule",
   components: {
-      Contact
+    Contact
   }
 };
 </script>
