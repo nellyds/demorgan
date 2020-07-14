@@ -15,7 +15,7 @@
           class="navTitle"
           :color="!isScrolling ? 'rgba(15, 85, 185, 1)' : 'white'"
           text
-          >Wellness 1 Pharmacy</v-btn
+          >The Demorgan Wellness Group</v-btn
         >
       </v-toolbar-items>
     </v-app-bar>
@@ -77,7 +77,6 @@ export default {
           text: "Contact",
           click: "#contact"
         },
-        { text: "Find a Pharmacy", click: "#pharmacy" }
       ];
     }
   },
