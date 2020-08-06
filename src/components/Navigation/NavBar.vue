@@ -4,16 +4,16 @@
       app
       clipped-left
       v-scroll="onScroll"
-      :color="!isScrolling ? 'white' : 'rgba(15, 85, 185, 1)'"
+      :color="!isScrolling ? 'white' : 'rgba(65,189,255)'"
     >
       <v-app-bar-nav-icon
-        :color="!isScrolling ? 'rgba(15, 85, 185, 1)' : 'white'"
+        :color="!isScrolling ? 'rgba(65,189,255)' : 'white'"
         @click="drawer = !drawer"
       ></v-app-bar-nav-icon>
       <v-toolbar-items>
         <v-btn
           class="navTitle"
-          :color="!isScrolling ? 'rgba(15, 85, 185, 1)' : 'white'"
+          :color="!isScrolling ? 'rgba(65,189,255)' : 'white'"
           text
           >The Demorgan Wellness Group</v-btn
         >
@@ -24,7 +24,7 @@
       v-model="drawer"
       app
       clipped
-      color="rgba(15, 85, 185, 1)"
+      color="rgba(65,189,255)"
     >
       <v-list
         v-for="(item, i) in items"
@@ -32,7 +32,7 @@
         :active-class="!isScrolling ? 'primary--text' : undefined"
         :to="item.to"
         dense
-        class="rgb(0,169,159)"
+        class="rgba(65,189,255)"
       >
         <v-list-item>
           <span

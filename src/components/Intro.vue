@@ -10,9 +10,6 @@
           </div>
         </v-col>
         <v-col v-if="$vuetify.breakpoint.smAndUp" sm="12" md="6">
-          <!-- <div class="aboutContainer">
-            <Timeline />
-          </div> -->
         </v-col>
       </v-row>
     </div>
@@ -20,16 +17,15 @@
 </template>
 
 <script>
-// import Timeline from "@/components/Timeline.vue";
 export default {
   components: {
-    // Timeline
   },
   data: () => ({
     intro:
-      "At the DeMorgan group, our mission is to partner with the community for everyone’s health by providing health care services regardless of ability to pay; treating patients with compassion, dignity and respect; protecting confidentiality; and offering culturally sensitive services and community outreach.  With our roots in the Dayton area, we are proud to serve our community and our neighbors.",
+     "Welcome to The DeMorgan Wellness Group. We put your family’s health and well being first. If you live in the metro area, you can stop by our office for a health and well being consultation. However, don’t worry if you don’t live near us. The majority of our information and services are available on this website and through Clocktree.",
     aboutSandy:
-      "Sandy Anderson CNP is a certified Nurse Practirioner with more than 25 as a practicing nurse and a Family Practice professional."
+      "Sandy Anderson CNP is a certified Nurse Practirioner with more than 25 as a practicing nurse and a Family Practice professional.",
+    aboutFNP: "Unlike other specialties that are limited to a particular organ or disease, family medicine integrates care for patients of all genders and every age, and advocates for the patient in a complex health care system."
   })
 };
 </script>

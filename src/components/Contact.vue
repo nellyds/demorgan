@@ -1,6 +1,5 @@
 <template>
-  <section id="contact">
-    <v-col class="contactForm" align="center">
+  <div id="contact">
       <v-form ref="form" v-model="valid">
         Call or submit a note and let's talk about what DeMorgan will do for
         you!
@@ -47,8 +46,8 @@
           Send Message
         </v-btn>
       </v-form>
-    </v-col>
-  </section>
+
+</div>
 </template>
 
 <script>
@@ -115,14 +114,5 @@ export default {
 };
 </script>
 <style scoped>
-@media screen and (max-width: 500px) {
-  .py-5 {
-    width: 350px;
-  }
-}
-@media screen and (min-width: 500px) {
-  .py-5 {
-    min-width: 100%;
-  }
-}
+
 </style>

@@ -17,6 +17,12 @@ export default {
     name: String,
     description: String,
     imageUrl: String
+  },
+  data(){
+    return{
+
+
+    }
   }
 };
 </script>

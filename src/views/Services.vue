@@ -37,6 +37,25 @@
           </div>
         </v-col>
       </v-row>
+      <v-row>
+      <v-col>
+      <div class="blueIntro">
+
+                  <p data-aos="fade-right" data-aos-duration="800">{{aboutFNP}}</p>
+      </div>
+      </v-col>
+      <v-col>
+            <v-card class="serviceListCard" max-width="350" raised outlined data-aos="fade-down" data-aos-duration="800">
+        <v-card-text>
+        </v-card-text>
+        <v-list >
+          <v-list-item data-aos="fade-left" data-aos-duration="800" v-for="(item,i) in serviceList" v-bind:key="i">
+            <p>{{item}}</p>
+          </v-list-item>
+        </v-list>
+      </v-card>
+      </v-col>
+      </v-row>
     </v-container>
   </div>
 </template>
@@ -72,12 +91,30 @@ export default {
           description: "Talk with Sandy and then sign up at www.clocktree.com",
           id: "3"
         }
+      ],
+            aboutFNP: "Unlike other specialties that are limited to a particular organ or disease, family medicine integrates care for patients of all genders and every age, and advocates for the patient in a complex health care system.  Whether than entails diagnosing and manageing your issues or making sure you get to the the specialists you need, Family Medicine will potentially deal with any issue you can think of.  If it is affecting your health, family medicine can address it!",
+      serviceList: [
+        "Geriatric Care",
+        "Acute Care",
+        "Chronic Disease Management", 
+        "Substance Abuse Treatment",
+        "Reproductive Health",
+        "Immunizations",
+        "Pediatric Carea",
+        "Medication Management"
       ]
     };
   }
 };
 </script>
 <style scoped>
+.serviceListCard{
+  width: 45vw;
+}
+.blueIntro{
+  width: 45vw;
+  text-align: left;
+}
 .sectionTitle {
   font-weight: bolder;
   font-size: 3em;
@@ -106,5 +143,12 @@ export default {
     padding: 1em;
     width: 100vw;
   }
+  .serviceListCard{
+  width: 85vw;
+}
+.blueIntro{
+  width: 85vw;
+  text-align: left;
+}
 }
 </style>

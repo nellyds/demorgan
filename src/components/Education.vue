@@ -54,7 +54,7 @@ export default {
     font-weight: 800;
     width: 90%;
     margin: 20px;
-    text-align: center;
+    text-align: left;
   }
   .precept {
     padding: 10px;
@@ -86,7 +86,7 @@ export default {
     font-size: 1.5em;
     font-weight: 800;
     width: 60%;
-    text-align: center;
+    text-align: left;
     margin-left: 10%;
   }
   .precept {
